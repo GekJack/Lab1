@@ -6,7 +6,7 @@ html, body {
 body::before {
     content: "";
     position: fixed;
-    padding-bottom: 80px;
+    padding-bottom: 200px;
     top: 0;
     left: 0;
     width: 100%;
