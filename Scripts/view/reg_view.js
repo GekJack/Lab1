@@ -13,7 +13,7 @@ export default class FormView {
     }
   
     resetForm() {
-      document.querySelector("form").reset();
+        document.getElementById("RegForm").reset();
     }
   }
   
