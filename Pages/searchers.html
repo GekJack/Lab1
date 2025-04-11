@@ -44,7 +44,9 @@
     </header>
 
 <main id="content" class="mt-5 pt-5 mb-5 pb-5">
-    <button id="addPostBtn" class="btn btn-outline-light">Додати пост</button>
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <button id="addPostBtn" class="btn btn-outline-light">Додати пост</button>
+    </div>
     <div id="postsContainer" class="container">
         <div class="discussion-card" onclick="window.location.href='/Lab1/Pages/discussion/discussion-1.html';">
             <div class="discussion-header">
@@ -79,15 +81,31 @@
             <div class="discussion-footer">Буду радий вашому відгуку!</div>
         </div>
     </div>
-    <div id="postModal" class="modal">
-        <div class="modal-content">
-          <span class="close" id="closeModal">&times;</span>
-          <h2>Новий пост</h2>
-          <input type="text" id="postTitle" placeholder="Заголовок"><br>
-          <textarea id="postContent" placeholder="Текст поста"></textarea><br>
-          <button id="submitPost">Опублікувати</button>
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+      
+            <div class="modal-header">
+              <h5 class="modal-title" id="postModalLabel">Новий пост</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+      
+            <div class="modal-body">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="postTitle" placeholder="Заголовок">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="postContent" rows="4" placeholder="Текст поста"></textarea>
+              </div>
+            </div>
+      
+            <div class="modal-footer">
+              <button type="button" id="submitPost" class="btn btn-primary">Опублікувати</button>
+            </div>
+      
+          </div>
         </div>
-    </div>
+      </div>
 </main>
 
 
