@@ -44,7 +44,8 @@
     </header>
 
 <main id="content" class="mt-5 pt-5 mb-5 pb-5">
-    <div class="container">
+    <button id="addPostBtn" class="btn btn-outline-light">Додати пост</button>
+    <div id="postsContainer" class="container">
         <div class="discussion-card" onclick="window.location.href='/Lab1/Pages/discussion/discussion-1.html';">
             <div class="discussion-header">
                 <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User1 Avatar">
@@ -78,6 +79,15 @@
             <div class="discussion-footer">Буду радий вашому відгуку!</div>
         </div>
     </div>
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Новий пост</h2>
+          <input type="text" id="postTitle" placeholder="Заголовок"><br>
+          <textarea id="postContent" placeholder="Текст поста"></textarea><br>
+          <button id="submitPost">Опублікувати</button>
+        </div>
+    </div>
 </main>
 
 
@@ -95,5 +105,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="/Lab1/Scripts/link_to_profile.js"></script>
 <script src="/Lab1/Scripts/link_to_reg_sign_in.js"></script>
+<script src="/Lab1/Scripts/main_searchers.js"></script>
 </body>
 </html>
