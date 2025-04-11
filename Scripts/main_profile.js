@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (nameElement) {
             nameElement.textContent = currentaccount.name;
+        }else {
+            console.error('Нема айді логін');
         }
 
         if (dobElement) {
