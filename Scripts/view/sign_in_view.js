@@ -7,7 +7,7 @@ export default class LoginView {
     }
   
     redirectToHomePage() {
-      window.location.href = "./index.html";
+      window.location.href = "/Lab1/index.html";
     }
   }
   
