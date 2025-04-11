@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 localStorage.removeItem("currentAccount");
 
-                window.location.href = "./index.html";
+                window.location.href = "/Lab1/index.html";
             });
         }
     } else {
