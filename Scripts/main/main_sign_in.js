@@ -1,6 +1,6 @@
-import LoginModel from "/Lab1/Scripts/model/model_sign_in.js";
-import LoginView from "/Lab1/Scripts/view/view_sign_in.js";
-import LoginController from "/Lab1/Scripts/controller/controller_sign_in.js";
+import FormModel from "/Lab1/Scripts/models/sign_in_model.js";
+import FormView from "/Lab1/Scripts/view/sign_in_view.js";
+import FormController from "/Lab1/Scripts/controller/sign_in_controller.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const loginModel = new LoginModel();
