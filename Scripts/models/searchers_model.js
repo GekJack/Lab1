@@ -10,7 +10,7 @@ export default class PostModel {
     }
   
     getCurrentUsername() {
-      const currentAccount = JSON.parse(localStorage.getItem("currentaccount"));
+      const currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
       return currentAccount?.name || null;
     }
   }
