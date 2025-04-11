@@ -9,3 +9,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   formController.initialize();
 });
+
