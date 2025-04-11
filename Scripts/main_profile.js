@@ -1,23 +1,32 @@
-const currentaccountJSON = localStorage.getItem("currentAccount");
+document.addEventListener('DOMContentLoaded', function() {
+    const currentaccountJSON = localStorage.getItem("currentAccount");
 
-if (currentaccountJSON) {
-  const currentaccount = JSON.parse(currentaccountJSON);
+    if (currentaccountJSON) {
+        const currentaccount = JSON.parse(currentaccountJSON);
 
-  const nameElement = document.getElementById("login");
-  const dobElement = document.getElementById("dob");
+        const nameElement = document.getElementById("login");
+        const dobElement = document.getElementById("dob");
 
-  nameElement.textContent = currentaccount.name;
-  dobElement.textContent = "День народження: " + currentaccount.dob;
+        if (nameElement) {
+            nameElement.textContent = currentaccount.name;
+        }
 
-  const logoutLink = document.getElementById("logoutButton");
+        if (dobElement) {
+            dobElement.textContent = "День народження: " + currentaccount.dob;
+        }
 
-  logoutLink.addEventListener("click", function (event) {
-    event.preventDefault();
+        const logoutLink = document.getElementById("logoutButton");
 
-    localStorage.removeItem("currentAccount");
+        if (logoutLink) {
+            logoutLink.addEventListener("click", function(event) {
+                event.preventDefault();
 
-    window.location.href = "./index.html";
-  });
-} else {
-  console.log("Дані про аккаунт не знайдені в LocalStorage");
-}
+                localStorage.removeItem("currentAccount");
+
+                window.location.href = "./index.html";
+            });
+        }
+    } else {
+        console.log("Дані про аккаунт не знайдені в LocalStorage");
+    }
+});
