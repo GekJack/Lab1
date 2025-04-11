@@ -34,7 +34,7 @@ export default class FormController {
       this.view.showSuccessMessage();
       this.view.resetForm();
       this.model.setCurrentAccount(userData);
-      window.location.href = "/Lab1/index.html";
+      window.location.href = "https://gekjack.github.io/Lab1/index.html";
     }
   }
   
