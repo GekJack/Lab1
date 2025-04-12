@@ -54,7 +54,7 @@ export default class PostView {
     div.className = "discussion-card";
   
     div.innerHTML = `
-      <a href="/Lab1/Pages/discussion.html?id=${post.id}" style="text-decoration: none; color: inherit;">
+      <a href="/Lab1/Pages/discussion/discussion.html?id=${post.id}" style="text-decoration: none; color: inherit;">
         <div class="discussion-header">
           <img src="https://www.w3schools.com/w3images/avatar4.png" alt="User Avatar">
           <div class="author">${post.username}</div>
