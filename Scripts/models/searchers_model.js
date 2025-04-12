@@ -5,6 +5,7 @@ export default class PostModel {
 
   savePost(post) {
     const posts = this.getPosts();
+    post.id = Date.now().toString();
     posts.unshift(post);
     localStorage.setItem("posts", JSON.stringify(posts));
   }

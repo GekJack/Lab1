@@ -52,16 +52,20 @@ export default class PostView {
   renderPost(post) {
     const div = document.createElement("div");
     div.className = "discussion-card";
+  
     div.innerHTML = `
-      <div class="discussion-header">
-        <img src="https://www.w3schools.com/w3images/avatar4.png" alt="User Avatar">
-        <div class="author">${post.username}</div>
-        <div class="time">${post.time}</div>
-      </div>
-      <h4>${post.title}</h4>
-      <p>${post.content}</p>
-      <div class="discussion-footer">Буду радий вам!</div>
+      <a href="/Lab1/Pages/discussion.html?id=${post.id}" style="text-decoration: none; color: inherit;">
+        <div class="discussion-header">
+          <img src="https://www.w3schools.com/w3images/avatar4.png" alt="User Avatar">
+          <div class="author">${post.username}</div>
+          <div class="time">${post.time}</div>
+        </div>
+        <h4>${post.title}</h4>
+        <p>${post.content}</p>
+        <div class="discussion-footer">Буду радий вам!</div>
+      </a>
     `;
+  
     this.postsContainer.prepend(div);
   }
 
