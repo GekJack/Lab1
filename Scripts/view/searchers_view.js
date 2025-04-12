@@ -67,6 +67,6 @@ export default class PostView {
 
   renderPosts(posts) {
     this.postsContainer.innerHTML = "";
-    posts.forEach(post => this.renderPost(post));
+    [...posts].reverse().forEach(post => this.renderPost(post));
   }
 }
