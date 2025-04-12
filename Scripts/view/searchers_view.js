@@ -1,7 +1,7 @@
 export default class PostView {
   constructor() {
     this.modalEl = document.getElementById("postModal");
-    this.modal = new bootstrap.Modal(this.modalEl); 
+    this.modal = new bootstrap.Modal(this.modalEl);
 
     this.openBtn = document.getElementById("addPostBtn");
     this.submitBtn = document.getElementById("submitPost");
@@ -17,7 +17,7 @@ export default class PostView {
         alert("Щоб написати пост, увійдіть у свій акаунт!");
         return;
       }
-      this.modal.show(); 
+      this.modal.show();
     };
 
     this.submitBtn.onclick = () => {
@@ -29,6 +29,19 @@ export default class PostView {
         this.modal.hide();
       }
     };
+  }
+
+  bindSearch(onSearch) {
+    const form = document.getElementById("searchForm");
+    const input = document.getElementById("searchInput");
+
+    if (!form || !input) return;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = input.value.trim();
+      onSearch(query);
+    });
   }
 
   clearForm() {
@@ -50,5 +63,10 @@ export default class PostView {
       <div class="discussion-footer">Буду радий вам!</div>
     `;
     this.postsContainer.prepend(div);
+  }
+
+  renderPosts(posts) {
+    this.postsContainer.innerHTML = "";
+    posts.forEach(post => this.renderPost(post));
   }
 }
